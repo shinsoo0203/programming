@@ -1,8 +1,10 @@
+'''
+# 정확성: 100, 효율성: 0
 def solution(scoville, K):
     answer = 0
     old=0
     
-    while True:
+    while 1:
         
         scoville.sort()
         
@@ -15,3 +17,4 @@ def solution(scoville, K):
         else: return -1
         if old==scoville[0]: return -1
     return answer
+'''
