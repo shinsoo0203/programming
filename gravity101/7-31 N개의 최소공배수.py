@@ -2,7 +2,6 @@ from collections import Counter
 
 def solution(arr):
     answer = 1
-
     count = {}
 
     for i in arr:
@@ -18,12 +17,9 @@ def solution(arr):
         c = Counter(check)
 
         for i in c:
-            if i not in count:
-                count[i] = c[i]
-            elif c[i] > count[i]:
+            if i not in count or c[i] > count[i]:
                 count[i] = c[i]
 
-    print(count)
     for i in count:
         if count[i] != 0:
             answer = (i ** count[i]) * answer
